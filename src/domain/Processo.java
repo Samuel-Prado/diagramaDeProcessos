@@ -108,8 +108,8 @@ public class Processo {
 
     @Override
     public String toString() {
-        return "Processo [numero=" + numero + ", vara=" + vara + ", tribunal=" + tribunal + ", cliente=" + cliente
-                + ", parteContraria=" + parteContraria + ", abertura=" + abertura + ", conclusao=" + conclusao + "]";
+        return "Processo [numero=" + numero + ", vara=" + vara + ", tribunal=" + tribunal + ", cliente=" + cliente.getNome()
+                + ", parteContraria=" + parteContraria.getNome() + ", abertura=" + abertura + ", conclusao=" + conclusao + "]";
     }
 
     

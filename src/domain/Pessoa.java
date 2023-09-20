@@ -2,7 +2,7 @@ package domain;
 
 import java.util.List;
 
-public class Pessoa {
+public abstract class Pessoa {
 
     protected Integer codigo;
 

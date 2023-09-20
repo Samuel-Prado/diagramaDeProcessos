@@ -19,13 +19,13 @@ public class App {
 		Date data3 = new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2023");
 		Date data4 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2023");
 
-		Pessoa pessoa = new Pessoa(1, "Samuel Prado Soares", "samuel@gmail.com");
-		Pessoa pessoa1 = new Pessoa(2, "Victor Afonso Fernandes", "afonso@gmail.com");
+		Pessoa pessoaFisica = new PessoaFisica(1, "Samuel Prado Soares", "samuel@gmail.com","320.543.415-23");
+		Pessoa pessoaJuFisica = new PessoaJuridica(2, "Victor Afonso Fernandes", "afonso@gmail.com", "0493.3703.4801-40");
 
-		PessoaFisica pessoaFisica = new PessoaFisica(pessoa.getCodigo(), pessoa.getNome(), pessoa.getEmail(),
-				"320.543.415-23");
-		PessoaJuridica pessoaJuFisica = new PessoaJuridica(pessoa1.getCodigo(), pessoa1.getNome(), pessoa1.getEmail(),
-				"0493.3703.4801-40");
+		// PessoaFisica pessoaFisica = new PessoaFisica(pessoa.getCodigo(), pessoa.getNome(), pessoa.getEmail(),
+		// 		"320.543.415-23");
+		// PessoaJuridica pessoaJuFisica = new PessoaJuridica(pessoa1.getCodigo(), pessoa1.getNome(), pessoa1.getEmail(),
+		// 		"0493.3703.4801-40");
 
 		Tribunal tribunal = new Tribunal(1, "TRF-1");
 
@@ -39,8 +39,8 @@ public class App {
 
 		Custo custo = new Custo(data4, "Segunda via de documentos.", 150.50, processo);
 
-		pessoa.setProcessos(Arrays.asList(processo));
-		pessoa1.setProcessos(Arrays.asList(processo));
+		pessoaFisica.setProcessos(Arrays.asList(processo));
+		pessoaJuFisica.setProcessos(Arrays.asList(processo));
 
 		tribunal.setVaras(Arrays.asList(vara));
 		tribunal.setProceessos(Arrays.asList(processo));
