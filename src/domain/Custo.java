@@ -3,38 +3,19 @@ package domain;
 import java.util.Date;
 
 public class Custo {
-    
-    private Integer codigo;
-
-    private Processo processo;
 
     private Date data;
 
+    private String descricao;
+    
     private Double valor;
 
-    private String descricao;
+    private Processo processo;
 
-    public Custo(Integer codigo, Processo processo, Date data, Double valor, String descricao) {
-        this.codigo = codigo;
-        this.processo = processo;
+    public Custo(Date data, String descricao, Double valor, Processo processo) {
         this.data = data;
-        this.valor = valor;
         this.descricao = descricao;
-    }
-
-    public Integer getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
-    }
-
-    public Processo getProcesso() {
-        return processo;
-    }
-
-    public void setProcesso(Processo processo) {
+        this.valor = valor;
         this.processo = processo;
     }
 
@@ -46,14 +27,6 @@ public class Custo {
         this.data = data;
     }
 
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -62,10 +35,27 @@ public class Custo {
         this.descricao = descricao;
     }
 
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double valor) {
+        this.valor = valor;
+    }
+
+    public Processo getProcesso() {
+        return processo;
+    }
+
+    public void setProcesso(Processo processo) {
+        this.processo = processo;
+    }
+
     @Override
     public String toString() {
-        return "Custo [codigo=" + codigo + ", processo=" + processo + ", data=" + data + ", valor=" + valor
-                + ", descricao=" + descricao + "]";
+        return "Custo [data=" + data + ", descricao=" + descricao + ", valor=" + valor + ", processo=" + processo + "]";
     }
+
+   
 
 }

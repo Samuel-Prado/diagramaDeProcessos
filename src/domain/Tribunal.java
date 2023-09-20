@@ -7,6 +7,8 @@ public class Tribunal {
     private Integer codigo;
 
     private String nome;
+    
+    private List<Processo> proceessos; 
 
     private List<Vara> varas;
 
@@ -17,6 +19,14 @@ public class Tribunal {
 
     public Integer getCodigo() {
         return codigo;
+    }
+
+    public List<Processo> getProceessos() {
+        return proceessos;
+    }
+
+    public void setProceessos(List<Processo> proceessos) {
+        this.proceessos = proceessos;
     }
 
     public void setCodigo(Integer codigo) {
@@ -41,7 +51,7 @@ public class Tribunal {
 
     @Override
     public String toString() {
-        return "Tribunal [codigo=" + codigo + ", nome=" + nome + ", varas=" + varas + "]";
+        return "Tribunal [codigo=" + codigo + ", nome=" + nome + "]";
     }
 
     

@@ -52,8 +52,7 @@ public class Vara {
 
     @Override
     public String toString() {
-        return "Vara [codigo=" + codigo + ", nome=" + nome + ", tribunal=" + tribunal + ", processos=" + processos
-                + "]";
+        return "Vara [codigo=" + codigo + ", nome=" + nome + ", tribunal=" + tribunal + "]";
     }
 
     

@@ -4,24 +4,16 @@ import java.util.Date;
 
 public class Audiencia {
     
-    private Integer numero;
-
     private Date data;
 
     private String recomendacao;
 
-    public Audiencia(Integer numero, Date data, String recomendacao) {
-        this.numero = numero;
+    private Processo processo;
+
+    public Audiencia(Date data, String recomendacao, Processo processo) {
         this.data = data;
         this.recomendacao = recomendacao;
-    }
-
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+        this.processo = processo;
     }
 
     public Date getData() {
@@ -40,9 +32,17 @@ public class Audiencia {
         this.recomendacao = recomendacao;
     }
 
+    public Processo getProcesso() {
+        return processo;
+    }
+
+    public void setProcesso(Processo processo) {
+        this.processo = processo;
+    }
+
     @Override
     public String toString() {
-        return "Audiencia [numero=" + numero + ", data=" + data + ", recomendacao=" + recomendacao + "]";
+        return "Audiencia [data=" + data + ", recomendacao=" + recomendacao + ", processo=" + processo + "]";
     }
-    
+
 }

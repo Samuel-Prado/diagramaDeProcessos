@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Processo {
     
-    private Integer numero;
+    private String numero;
 
     private Vara vara;
 
-    private Vara tribunal;
+    private Tribunal tribunal;
 
     private Pessoa cliente;
 
@@ -23,7 +23,7 @@ public class Processo {
 
     List<Custo> custos;
 
-    public Processo(Integer numero, Vara vara, Vara tribunal, Pessoa cliente, Pessoa parteContraria, Date abertura,
+    public Processo(String numero, Vara vara, Tribunal tribunal, Pessoa cliente, Pessoa parteContraria, Date abertura,
             Date conclusao) {
         this.numero = numero;
         this.vara = vara;
@@ -34,11 +34,11 @@ public class Processo {
         this.conclusao = conclusao;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -50,11 +50,11 @@ public class Processo {
         this.vara = vara;
     }
 
-    public Vara getTribunal() {
+    public Tribunal getTribunal() {
         return tribunal;
     }
 
-    public void setTribunal(Vara tribunal) {
+    public void setTribunal(Tribunal tribunal) {
         this.tribunal = tribunal;
     }
 
@@ -108,9 +108,8 @@ public class Processo {
 
     @Override
     public String toString() {
-        return super.toString() + "Processo [numero=" + numero + ", vara=" + vara + ", tribunal=" + tribunal + ", cliente=" + cliente
-                + ", parteContraria=" + parteContraria + ", abertura=" + abertura + ", conclusao=" + conclusao
-                + ", audiencias=" + audiencias + ", custos=" + custos + "]";
+        return "Processo [numero=" + numero + ", vara=" + vara + ", tribunal=" + tribunal + ", cliente=" + cliente
+                + ", parteContraria=" + parteContraria + ", abertura=" + abertura + ", conclusao=" + conclusao + "]";
     }
 
     
